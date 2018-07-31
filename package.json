@@ -1,0 +1,28 @@
+{
+  "name": "grunt-svgbox",
+  "version": "0.3.0",
+  "description": "Grunt task which extracts svgs to scss file by collecting them from sprite file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.louis-net.de:guengoeren/grunt-svg-box.git"
+  },
+  "keywords": [
+    "grunt",
+    "tasks",
+    "npm",
+    "check"
+  ],
+  "author": "Onur Guengoeren",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "colors": "^1.1.2"
+  },
+  "devDependencies": {
+     "grunt": "~0.4.5"
+  }
+}
