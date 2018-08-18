@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.louis-net.de:guengoeren/grunt-svg-box.git"
+    "url": "git@github.com:LOUISINTERNET/grunt-svg-box.git"
   },
   "keywords": [
     "grunt",
