@@ -1,6 +1,6 @@
 {
   "name": "grunt-svgbox",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Grunt task which extracts svgs to scss file by collecting them from sprite file.",
   "main": "index.js",
   "scripts": {
