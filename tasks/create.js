@@ -5,6 +5,9 @@ module.exports = function (grunt) {
 
   function createScssFile($, targetFilePath) {
     var output = [];
+
+    var fileContent = grunt.file.exists(targetFilePath) ? grunt.file.read(targetFilePath) : ''
+
     $('symbol').each(function () {
       var $this = $(this);
       var $title = $this.find('title');
@@ -16,7 +19,7 @@ module.exports = function (grunt) {
       output.push(title + "'" + $output.html() + "';");
     });
 
-    grunt.file.write(targetFilePath, output.join('\n'));
+    grunt.file.write(targetFilePath, fileContent + output.join('\n'));
   };
 
   function createJSONFile($, targetFilePath) {
@@ -38,9 +41,14 @@ module.exports = function (grunt) {
         grunt.log.warn('No output mode defined, will use default: scss');
       }
 
+
+
       var targetFilePath = taskConfig.dest;
 
+      grunt.file.delete(targetFilePath)
       taskConfig.src.forEach(function (filename) {
+
+
         if (!grunt.file.exists(filename)) {
           grunt.log.error(filename + ' does not exists, skipping.');
           return;
