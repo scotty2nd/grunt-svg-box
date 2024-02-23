@@ -42,10 +42,16 @@ module.exports = function (grunt) {
       }
 
 
-
       var targetFilePath = taskConfig.dest;
 
-      grunt.file.delete(targetFilePath)
+      const path = require('path');
+
+      const absolutePath = path.resolve(process.cwd(), targetFilePath);
+
+      if (grunt.file.exists(absolutePath)) {
+        grunt.file.delete(absolutePath, { force: true });
+      }
+
       taskConfig.src.forEach(function (filename) {
 
 
